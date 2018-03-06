@@ -29,14 +29,14 @@
 ; Costomize for each project: --------------------------------------------------
 ; pars which are "null" dont get executed --------------------------------------
 
-global $shippingMode = null 	
-Global $shippingModeParameter = IniRead(@scriptdir & "BIOS.ini","Bios","shippingMode"," /ShipUEFIOS")		
+global $shippingMode =  IniRead(@scriptdir & "BIOS.ini","shippingMode","shippingMode",null) 	
+Global $shippingModeParameter = IniRead(@scriptdir & "BIOS.ini","shippingMode","shippingModeparameter"," /ShipUEFIOS")		
 
 ; Change command for BIOS flash. can be path to flash.bat too.
-global $biosCommand = IniRead(@scriptdir & "BIOS.ini","Bios","flash","")
+global $biosCommand = IniRead(@scriptdir & "BIOS.ini","Bios","flash",Null)
 
 ; Change bios version for each Project
-global $biosVersion =IniRead(@scriptdir & "Bios.ini","Bios","version","")
+global $biosVersion =IniRead(@scriptdir & "Bios.ini","Bios","version",null)
 
 ; Additional BIOS string
 
@@ -661,7 +661,7 @@ EndIf
 EndFunc
 
 
-writeLog("Model: "& $sModel &" /Sku: "& $sSku &" /SN: "&$Output2 &" /BIOSV: "& $Output & @CRLF & $transLog2 & " /Remaining Capacity: " & $CurrentCapacity & " Wh /In Percent: " & $calcPercentCapacityRounded & " % " & $transLog &@CRLF)
+writeLog("Model; "& $sModel &" ;Sku:; "& $sSku &" ;SN; "&$Output2 &" ;BIOSV; "& $Output & $transLog2 & " ;Remaining Capacity; " & $CurrentCapacity & "; Wh / In Percent; " & $calcPercentCapacityRounded & " ;%; " & $transLog &@CRLF)
 
 
 #cs
