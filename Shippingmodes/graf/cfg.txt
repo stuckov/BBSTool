@@ -1,0 +1,2 @@
+polling rate:1000
+polling count:1

@@ -1,0 +1,1 @@
+VarEdit.exe /flash:SM.uve

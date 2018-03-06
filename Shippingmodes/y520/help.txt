@@ -1,0 +1,17 @@
+::==========================================================
+::    LBGBattCtrl.exe             Ver:1.0.0.2  
+::    BuildDate:2015.5.13   By xiangxiang(LCFC STE)
+::==========================================================
+::LBGBattCtrl [/?|/h] 
+::/? or /h  show help information
+
+::LBGBattCtrl [/on]  
+::Enter 60% mode 
+::LBGBattCtrl [/off]  
+::Exit 60% mode 
+::LBGBattCtrl [/lock]  
+::Enter ShipMode 
+::LBGBattCtrl [/unlock]  
+::Exit ShipMode 
+::Enter ShipMode success,return 0 
+::Enter ShipMode FAIL,return 1 
