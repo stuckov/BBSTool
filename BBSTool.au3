@@ -30,13 +30,13 @@
 ; pars which are "null" dont get executed --------------------------------------
 
 global $shippingMode = null 	
-Global $shippingModeParameter = " /ShipUEFIOS"		
-		
+Global $shippingModeParameter = IniRead(@scriptdir & "BIOS.ini","Bios","shippingMode"," /ShipUEFIOS")		
+
 ; Change command for BIOS flash. can be path to flash.bat too.
-global $biosCommand= null	
+global $biosCommand = IniRead(@scriptdir & "BIOS.ini","Bios","flash","")
 
 ; Change bios version for each Project
-global $biosVersion =  null
+global $biosVersion =IniRead(@scriptdir & "Bios.ini","Bios","version","")
 
 ; Additional BIOS string
 
@@ -67,6 +67,7 @@ global $CurrentCapacity
 global $ACstatus 
 global $chargerate
 global $runTime = TimerInit()
+
 
 local  $objWMIServiceBB, $colItemsDmiBB, $oItemBB, $sWMIServiceBB
 global  $BaseBoardProductReal
@@ -580,7 +581,9 @@ if $idCheckbox then
 		;3Nod Wingman	
 		Case "Wingman"
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\wingman\VarEdit.exe /flash:SM.uve" ,@scriptdir)
-			
+		;3Nod Thalia
+		Case "Thalia"
+			RunWait(@ComSpec &" /c " & "\Shippingmodes\thalia\H2OUVE-W-CONSOLEx64 -sv SM.uve" ,@scriptdir)
 		; Clevo	
 		Case 'P670RE1M'
 			;	MsgBox("","Clevo1","")
@@ -623,6 +626,10 @@ if $idCheckbox then
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\clevo\IOinit.exe" ,@scriptdir)
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\clevo\shiptool.exe" ,@scriptdir)
 		Case 'P670HSGM'
+			;	MsgBox("","Clevo8","")
+			RunWait(@ComSpec &" /c " & "\Shippingmodes\clevo\IOinit.exe" ,@scriptdir)
+			RunWait(@ComSpec &" /c " & "\Shippingmodes\clevo\shiptool.exe" ,@scriptdir)
+		Case 'P670HS-GM'
 			;	MsgBox("","Clevo8","")
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\clevo\IOinit.exe" ,@scriptdir)
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\clevo\shiptool.exe" ,@scriptdir)

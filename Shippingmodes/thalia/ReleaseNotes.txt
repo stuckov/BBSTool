@@ -1,0 +1,606 @@
+Insyde H2OUVE (UEFI Variable Editor) Release Note
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.08
+-------------------------------------------------------------------------------
+- [Disabled] Add boot type of Multi-Config.
+- Fix IFR parser failed by incorrect formset record values.
+- Change the prepresetation of this release note.
+- Remove incorrect check of Step element of Numberic option in SCU.
+
+
+################################################################################
+#                              Linux/Windows Version                           #
+#                              (Before 100.00.16.07)                           #
+################################################################################
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.07
+--------------------------------------------------------------------------------
+1. Fix dynamic select option is not supported in Chrome/IE.
+2. Fix set default value failed by -d40 -c command.
+3. Fix wrong row label of grid of variable editor.
+4. Add text logo in Multi-Config.
+5. Fix the Save as function causes new BIOS binary is different with unchanged original file.
+6. Add .uve binary process of variables for -gv and -sv commands.
+7. The -gv command can export specific variables with specific name/GUID.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.06
+--------------------------------------------------------------------------------
+1. Disable Multi-Config feature.
+2. Disable export setup csv file.
+3. Fix boot type without sequence.
+4. Fix parsing some FV in BIOS image causes memory error.
+5. Change copyright to 2015 in setup web.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.05
+--------------------------------------------------------------------------------
+1. Add signature for new process of Multi-Config.
+2. Change file format and its process for BIOS setup settings.
+3. Add add/modify/delete functions for Vairable editor.
+4. Change hand cursor when it's an unobvious editable cell in list of Multi-Config editor.
+5. Fix add hotkey type in Multi-Config editor is read-only.
+6. Change hand cursor when it's an unobvious editable cell in hotkey table of Multi-Config editor.
+7. Fix Active and Post columns of read-only item of Multi-Config can't be changed.
+8. Fix Active and Post columns to be unchecked when it's an invalid config of Multi-Config.
+9. Fix incompitable issues of legacy Multi-Config.
+10. Add logo type config data of Multi-Config for GUI mode.
+11. Strip binary to build smaller package.
+12. Update file parser of setup format.
+13. Update H2OUVE icon.
+14. Update images of background and editors.
+15. Update setup web style.
+16. Fix save function of exit page of setup web shows no changes message when something changed in UEFI mode.
+17. Fix different exported result of .uve file of variable on 64 nor 32 bit system.
+18. Fix dynamic options of oneof item not working.
+19. Fix submit data from setup web with non-digit and non-aplha contents causes wrong password.
+20. Support ITB feature in command mode.
+21. Fix modify password failed.
+22. Update d40 command set for boot type, boot device and password.
+23. Add SMBIOS type config data of Multi-Config for GUI mode.
+24. Enable logo type config data of Multi-Config.
+25. Enable SMBIOS type config data of Multi-Config.
+26. Add warning to remind that when active post to setup type data of Multi-Config will delete relative variables.
+27. Fix load specific BIOS image failed.
+28. Update BIOS logo position algorithm of Multi-Config.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.04
+--------------------------------------------------------------------------------
+1. Fix Save function not been enabled when delete item of Multi-Config editor.
+2. Add 64bit mode for Variable editor.
+3. Fix incorrect length of last data shown in Variable editor.
+4. Add Export function of Setup editor to export text file.
+5. Fix Export csv file type exists in runtime Setup editor, it should exists in image mode.
+6. Add duplicate boot device check, H2OUVE doesn't support duplicate boot devices.
+7. Fix write more value of tail data of Variable editor.
+8. Fix saving modified but unchecked items of Varaible editor still disables save function.
+9. Fix set item read-only causes every item behind it be read-only.
+10. Fix read-only item of Multi-Config can still be edited or deleted.
+11. Show confirm message when data is changed by changing display type of variable.
+12. Fix crash error when running exit functions of Setup web pages.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.03
+--------------------------------------------------------------------------------
+1. Update setup page of Setup Editor.
+2. Fix fixed and small string field of String editor.
+3. Update grid windows of Variable Editor to show raw data and ASCII code more flexible.
+4. Enable Multi-Config Editor.
+5. Add editable Valid and Mode column of Multi-Config list.
+6. Enable Import & Export functions when switch to Variable Editor.
+7. Fix imporperly work items processed by -sd command.
+8. Fix last item not working in setup web.
+9. Fix date & time item not working in setup web.
+10. Only one post setup data of Multi-Config.
+11. Only one act item in same type config data of Multi-Config.
+12. Fix boot type process in setup web.
+13. Add -f arguement to -sbt to skip BIOS version check.
+14. Embedded 1st level content of Multi-Config.
+15. Add Find function under Edit menu of String Editor.
+16. Add Dump BIOS rom function under File menu.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.02
+--------------------------------------------------------------------------------
+1. Fix "dump data" of variables in GUI mode display an incomplete file. (Before this version)
+2. Fix zh_TW language package not found error.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.01
+--------------------------------------------------------------------------------
+1. Apply new layout.
+2. Load runtime settings when H2OUVE starts.
+3. There is no need to load image file everytime when switch to another editor.
+4. Remove Image editor because there is a image mode.
+5. Update menubar.
+6. Add toolbar.
+7. Add splash image.
+8. Update About dialog with new logo and insyde url.
+9. Add refresh to reload current settings.
+10. Update all messages.
+11. Add change language.
+12. Show current mode of H2OUVE on title bar.
+13. Change the arguements of -mc -post and -mc -act.
+14. Update -d40 -t to match same result as -gbt.
+15. Cancel -d40 -c for clearing password, it doesn't work.
+16. Close H2OUVE when reading bios data failed.
+17. Disable string editor when it can't get strings.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.00
+--------------------------------------------------------------------------------
+1. H2OUVE is a single application now.
+2. Update logo image in About dialog.
+3. Show Insyde logo and version when startup.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.00
+--------------------------------------------------------------------------------
+1. Sync both Windows and Linux features and use same version number.
+2. Fix errors in modifying default setup setting procedure.
+3. Fix "-mc" command set errors include "-add -gen -format" for Multi-Config feature.
+4. Update messages in default setup modifying procedure.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.14.05
+--------------------------------------------------------------------------------
+1. Fix "Format error" when save hot key.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.14.04
+--------------------------------------------------------------------------------
+1. Fix crash caused by lacking boot type info from HTML data.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.14.03
+--------------------------------------------------------------------------------
+1. Fix "-ms -h" coming out wrong format about modifying boot order.
+2. Fix crash caused by incorrect callback data offset.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.14.02
+--------------------------------------------------------------------------------
+1. Fix some missing line feeds in help text ("-h").
+2. Fix "-sbd" coming out "Format Error" and failing to update boot order.
+3. Fix "-ms -fi Boot Order" coming out "Input wrong string format" and failing to update boot order.
+4. Fix "-d40 -g" coming out a list with not enough items, by adding "__CMD_MODE__" to properties.
+5. Fix "-sv" coming out "Can't find the variable Index:[xxx]" and failing to save variable to image.
+6. Fix "Load Custom Default" not to re-create html and reload it.
+7. Fix "Export to csv" crashing by changing wxFFile to InsyFile.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.14.01
+--------------------------------------------------------------------------------
+1. Fix crash in variable editor of GUI mode cause by no variable section being found.
+2. Fix crash in scu editor of GUI mode caused by 2 or more replacement occurrences.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.14.00
+--------------------------------------------------------------------------------
+1. Windows and Linux version are integrated in source codes.
+
+################################################################################
+#                              Windows Version                                 #
+#                           (Before 100.00.16.07)                              #
+################################################################################
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.06
+--------------------------------------------------------------------------------
+1. Fix "Discard Changes" does not work after modifying any option of setup settings.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.05
+--------------------------------------------------------------------------------
+1. Fix incorrect version number.
+2. Fix incorrect process callback id for old IFR package.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.12.06
+--------------------------------------------------------------------------------
+1. Fix failure of IFR initialization when specified memroy block is not readable in UEFI mode.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.12.04
+--------------------------------------------------------------------------------
+1. Fix the bug which the x64 tool crashes in generating images' boot type info.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.12.03
+--------------------------------------------------------------------------------
+1. Update LibH2O with which has some structural modification and bugs fixed.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.12.02
+--------------------------------------------------------------------------------
+1. Two executables are added to support WinPE32 and WinPE64.
+   "H2OUVE-W-PE.exe" is for WinPE32 and "H2OUVE-Wx64-PE.exe" is for WinPE64.
+   They have command-line mode only (without GUI mode).
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.12.01
+--------------------------------------------------------------------------------
+1. Support boot info operations.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.12.00
+--------------------------------------------------------------------------------
+1. Support multi-config of new specs.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.11.03
+--------------------------------------------------------------------------------
+1. Add debug mode log functions.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.11.02
+--------------------------------------------------------------------------------
+1. To handle callback ID is changed from a unique SMI to IHISI 52h.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.10
+--------------------------------------------------------------------------------
+1. The location of callback ID of loading optimal default is changed to be a member data of IFR.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.09
+--------------------------------------------------------------------------------
+1. The modification is made to be compatible to WinPE32 and WinPE64.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.08
+--------------------------------------------------------------------------------
+1. Add callback function to buttons of exit page in GUI SCU editor.
+2. Add callback function to "-l" (load optimal default).
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.07
+--------------------------------------------------------------------------------
+1. Fix "-gstr"'s failure to generate the string file.
+2. Fix "-sd"'s failure to save back to image.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.06
+--------------------------------------------------------------------------------
+1. Fix "SaveToRom" of variable editor does not work in GUI mode.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.05
+--------------------------------------------------------------------------------
+1. A new feature is added to set specified device to be the first of the boot order list.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.04
+--------------------------------------------------------------------------------
+1. Fix abnormal boot order after modification in GUI mode.
+2. Add support to password modification in GUI mode.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.03
+--------------------------------------------------------------------------------
+1. Add variable store process instead of reading variables.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.02
+--------------------------------------------------------------------------------
+1. Fix failure in loading variable data in GUI mode if the board is of AMD.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.01
+--------------------------------------------------------------------------------
+1. Fix crash when the selected variable size is larger than the buffer size 0x1000 in GUI mode.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.10.00
+--------------------------------------------------------------------------------
+1. Fix the tools will get double key strokes if the user press "N" when removing variable using "-re".
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.07
+--------------------------------------------------------------------------------
+1. The variable editor would display the content of invalid variables.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.06
+--------------------------------------------------------------------------------
+1. Release the order limit of boot type order in scu text file.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.05
+--------------------------------------------------------------------------------
+1. Read BIOS region only when the ROM is for description mode, to fix failure in reading variable from ME-locked ROM.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.04
+--------------------------------------------------------------------------------
+1. Fix (GUI) SCU editor being unable to edit system time.
+2. Fix generating default numeric item without default value.
+3. Fix saving SCU with text file fails to be really applied.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.03
+--------------------------------------------------------------------------------
+1. Add support reading font data of BIOS ver5.0.
+2. Show a error message if the tool fails to start up for duplicate instance.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.02
+--------------------------------------------------------------------------------
+1. Support "-gk" to generate hot key setting.
+2. Support multi-config hot key feature.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.01
+--------------------------------------------------------------------------------
+1. Do not produce an additional console window but use the original one.
+2. The help content is read form ReadMe.txt.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.09.00
+--------------------------------------------------------------------------------
+1. Support to modify strings of setup utility or setup browser.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.09
+--------------------------------------------------------------------------------
+1. Fix the behaviors of the functions in Exit page of SCU HTML.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.08
+--------------------------------------------------------------------------------
+1. Fix bug that modifying boot type order from SCU HTML will not modify boot order.
+2. If OEM data which classify boot device to boot type does not exit, to modify boot type order is not supported.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.07
+--------------------------------------------------------------------------------
+1. Fix bug that the prompt warning message of "SaveToRom" has no rejective button.
+2. Fix bug that changing boot device priority with patch text does not re-order the boot order.
+3. Add automation ID in setup.xlst.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.06
+--------------------------------------------------------------------------------
+1. Use name to stand for boot type order from string package.
+2. Add "-fea" to display if features are supported.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.05
+--------------------------------------------------------------------------------
+1. Change the argument type of modifying boot type order from boot type ID to boot type name.
+2. Fix generated default from BIOS image of version 5.0 contains abnormal numeric options, which might cause saving a abnormal image.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.04
+--------------------------------------------------------------------------------
+1. Fix abnormal security page in html view of scu or default.
+2. Fix a crash bug.
+3. Fix a misjudgement of unmatch numeric value when saving scu from a text file.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.03
+--------------------------------------------------------------------------------
+1. Remove dependency on VC++ 2008 Distributable.
+2. Fix some crash bugs.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.02
+--------------------------------------------------------------------------------
+1. Fix stack corruption when OpCodeStack is too small.
+2. Fix parsing checkbox op code results in incorrect stack.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.01
+--------------------------------------------------------------------------------
+1. Fix the bug IFR not found when in pure UEFI by add ReadIFRFromVariable
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.08.00
+--------------------------------------------------------------------------------
+1. Rename the tool and the package.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.07.04
+--------------------------------------------------------------------------------
+1. Add editor of multi-config default (command line).
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.07.03
+--------------------------------------------------------------------------------
+1. Renew HTML of SCU editor
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.07.02 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Fix bug:
+1. Fix crash if ROM size is not standard. e.g. 6M.
+2. Fix failure in "-sd" or "-ss" if the input text is not ended with a new-line.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.07.00 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. "-ms" is able to modify "Set Supervisor Password" and "Set User Password".
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.06.00 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. Add output "boot type order" by "-gs".
+2. Add usage of "-ss" to modify "boot type order".
+3. Add usage of "-ms" to modify "boot order".
+4. Add usage of "-ms" to modify "boot type order".
+5. Add compatibility checking by comparing options' attribute when executing "-ss" or "-sd".
+6. "-ms" is able to modify action string by executing callback ID.
+7. "-gs" generate additional password information.
+8. "-ss" is able to modify password.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.05.00 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. Add execution of Callback ID to enable modification of SCU options, especially for BMC relative options.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.04.00 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. Modify usage of "-gs" adding "-all" to generate a file with suppress and grayout setting or not.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.03.00 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. version number updated
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.02.04 (Kernel version required: 03.62.10, 03.72.10, 05.02.10 and later)
+--------------------------------------------------------------------------------
+Features:
+1. Support Window(GUI) mode and command line mode
+2. 3 editors : scu editor, image setup editor and variable editor
+
+
+################################################################################
+#                              Linux Version                                   #
+#                           (Before 100.00.16.07)                              #
+################################################################################
+Insyde Variable Editor Utility for Linux (Support Linux kernel > 2.6.18)
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.07
+--------------------------------------------------------------------------------
+1. Fix submit setup data on web page in old version FireFox without response and nothing changed.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.03
+--------------------------------------------------------------------------------
+1. Add Debian package.
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.01
+--------------------------------------------------------------------------------
+1. Fix load default not working error
+2. Fix boot device and boot type failures
+
+--------------------------------------------------------------------------------
+Release Version (SEG) 100.00.16.00
+--------------------------------------------------------------------------------
+1. Sync with Windows version
+
+
+Version 100.00.05.01
+--------------------------------------------------------------------------------
+1. Update multi-config process.
+2. Fix buffer error in variable editor of GUI.
+
+Version 100.00.05.00
+--------------------------------------------------------------------------------
+1. Update driver.
+2. Fix string filtering with empty error.
+3. Add hidden argument to somc command sets to operate hidden items.
+4. Remove boot device secton in -d40 -g command.
+5. Add -d40 -b to dump boot device list in name-value format.
+6. Add -d40 -t to dump boot type list in name-value format.
+7. Add -gbd to dump boot device list in setup format.
+8. Add -sbd to writ boot device list in setup format.
+9. Update help message with group.
+10. Add -h to list some example for -ms and -d40 -m commands.
+11. Add -cvl to check if variable is locked.
+12. Add -t argument to -bfirst to justify boot type order by boot device.
+
+Version 100.00.04.10
+--------------------------------------------------------------------------------
+1. Update usage of command mode.
+2. Add -d40 command set to handle new file format.
+3. Add -cdi command to check if there is any duplicate item and its location.
+4. Udpate copyright in file header
+
+Version 100.00.04.09
+--------------------------------------------------------------------------------
+1. Enhance performance of SCU parser.
+2. Add message about password settings at header of SCU file.
+3. Fix some help messages show at wrong position in web SCU editor.
+
+Version 100.00.04.08
+--------------------------------------------------------------------------------
+This is a internal test version.
+
+Version 100.00.04.07
+--------------------------------------------------------------------------------
+1. Add an advanced arguement to run efficiently for -ms option under CONSOLE mode.
+2. Modify -ms to accept multiple items.
+
+Version 100.00.04.06 (No Release)
+--------------------------------------------------------------------------------
+This is a internal test version.
+
+Version 100.00.04.05
+--------------------------------------------------------------------------------
+1. Remove 'build driver' procedure from package installation.
+2. Show version number in about dialog under GUI mode.
+
+Version 100.00.04.04
+--------------------------------------------------------------------------------
+1. Add graphic interface feature.
+2. Add non-driver SMI supported by BIOS.
+
+Version 100.00.04.00
+--------------------------------------------------------------------------------
+1. Include LibH2O.
+2. Shared library that LibH2O with other OS.
+
+Version 100.00.03.03
+--------------------------------------------------------------------------------
+1. Add hot-key feature
+2. Support 5.0
+
+Version 100.00.03.03
+--------------------------------------------------------------------------------
+1. Add protable feature
+
+Version 100.00.03.01
+--------------------------------------------------------------------------------
+1. Support pure efi
+2. Fix stack issues
+
+Version 100.00.03.00
+--------------------------------------------------------------------------------
+1. Support muti-config
+
+Version 100.00.02.06
+--------------------------------------------------------------------------------
+1. Support password modify through -ms.
+
+Version 100.00.02.05
+--------------------------------------------------------------------------------
+1. Configuration file check.
+2. Support password modify function.
+
+Version 100.00.02.04
+--------------------------------------------------------------------------------
+1. Merge new parser.
+
+Version 100.00.02.03
+--------------------------------------------------------------------------------
+1. Add boot type order modify with console function.
+
+Version 100.00.02.02
+--------------------------------------------------------------------------------
+1. Add modify boot type order modify function.
+2. Modify parse process.
+
+Version 100.00.02.01
+--------------------------------------------------------------------------------
+1. Fix callback function for modify option about BMC.
+
+Version 100.00.02.00
+--------------------------------------------------------------------------------
+1. The suppress or gray out options will be hidden according to current SCU status.(-gs)
+2. Add "-all" feature in "-gs" command for showing all options.
+
+
+
