@@ -3,7 +3,7 @@
 #AutoIt3Wrapper_Outfile=BBSTool.exe
 #AutoIt3Wrapper_Res_Comment=Flash Tool for battery check, bios update and shipping mode: For use in production. Only for MEDION confirmed projects.
 #AutoIt3Wrapper_Res_Description=MEDION AG
-#AutoIt3Wrapper_Res_Fileversion=3.0.0.39
+#AutoIt3Wrapper_Res_Fileversion=3.0.0.40
 #AutoIt3Wrapper_Res_Fileversion_AutoIncrement=p
 #AutoIt3Wrapper_Res_LegalCopyright=SiT Medion AG
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
