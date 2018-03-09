@@ -566,6 +566,8 @@ EndFunc
 
 func _ShippingMode($BaseBoardProduct)
 	$RegEx = _ArrayToString((StringRegExp($BaseBoardProduct,'[DFCE]1[357].*',$STR_REGEXPARRAYMATCH)))
+	$wcbt112x = _ArrayToString((StringRegExp($BaseBoardProduct,'WCBT112.*',$STR_REGEXPARRAYMATCH)))
+	$wmbt =  _ArrayToString((StringRegExp($BaseBoardProduct,'WMBT.*',$STR_REGEXPARRAYMATCH)))
 
 if $idCheckbox then	
 
@@ -577,7 +579,6 @@ if $idCheckbox then
 		;Wistron Graf 	
 		Case "Graf"
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\graf\ShipMode.exe" ,@scriptdir)
-
 		;3Nod Wingman	
 		Case "Wingman"
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\wingman\VarEdit.exe /flash:SM.uve" ,@scriptdir)
@@ -585,10 +586,11 @@ if $idCheckbox then
 		Case "Thalia"
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\thalia\H2OUVE-W-CONSOLEx64 -sv SM.uve" ,@scriptdir)
 		;WCBT112X
-		Case "WCBT112X"
-			RunWait(@ComSpec &" /c " & "\Shippingmodes\wcbt1122\ShippingMode.exe 1" ,@scriptdir)		
-		Case "WCBT1122"
-			RunWait(@ComSpec &" /c " & "\Shippingmodes\wcbt1122\ShippingMode.exe 1" ,@scriptdir)		
+		Case $wcbt112x
+			RunWait(@ComSpec &" /c " & "\Shippingmodes\wcbt1122\ShippingMode.exe 1" ,@scriptdir)			
+		;WMBT 8" & 10"
+		Case $wmbt
+			RunWait(@ComSpec &" /c " & "\Shippingmodes\wmbt\ShippingMode.exe 1" ,@scriptdir)	
 		; Clevo	
 		Case 'P670RE1M'
 			;	MsgBox("","Clevo1","")
@@ -660,7 +662,8 @@ if $idCheckbox then
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\y520\LBGBttCtrl_x64.exe /Lock" ,@scriptdir)
 		;case no shippindmode	
 		case else
-			MsgBox(16&$MB_TOPMOST,"Error","Error, no shippingmode available for this device :"&$BaseBoardProduct,2) 
+			MsgBox($MB_TOPMOST,"Error","Error, no shippingmode available for this device :"&$BaseBoardProduct,10) 
+		
 	EndSwitch
 EndIf
 EndFunc
