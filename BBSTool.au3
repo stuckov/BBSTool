@@ -587,6 +587,8 @@ if $idCheckbox then
 		;WCBT112X
 		Case "WCBT112X"
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\wcbt1122\ShippingMode.exe 1" ,@scriptdir)		
+		Case "WCBT1122"
+			RunWait(@ComSpec &" /c " & "\Shippingmodes\wcbt1122\ShippingMode.exe 1" ,@scriptdir)		
 		; Clevo	
 		Case 'P670RE1M'
 			;	MsgBox("","Clevo1","")
