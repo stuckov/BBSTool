@@ -27,7 +27,7 @@
 #ce ----------------------------------------------------------------------------
 
 ; Costomize for each project: --------------------------------------------------
-; pars which are "null" dont get executed --------------------------------------
+; parts which are "null" dont get executed --------------------------------------
 
 global $shippingMode =  IniRead(@scriptdir & "BIOS.ini","shippingMode","shippingMode",null) 	
 Global $shippingModeParameter = IniRead(@scriptdir & "BIOS.ini","shippingMode","shippingModeparameter"," /ShipUEFIOS")		
@@ -584,6 +584,9 @@ if $idCheckbox then
 		;3Nod Thalia
 		Case "Thalia"
 			RunWait(@ComSpec &" /c " & "\Shippingmodes\thalia\H2OUVE-W-CONSOLEx64 -sv SM.uve" ,@scriptdir)
+		;WCBT112X
+		Case "WCBT112X"
+			RunWait(@ComSpec &" /c " & "\Shippingmodes\wcbt1122\ShippingMode.exe 1" ,@scriptdir)		
 		; Clevo	
 		Case 'P670RE1M'
 			;	MsgBox("","Clevo1","")
